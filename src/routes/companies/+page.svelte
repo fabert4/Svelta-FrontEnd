@@ -17,28 +17,9 @@
             <div id="examples" class="container py-2">
 
                 <div class="row">
-                    <div class="col-lg-3 order-2 order-lg-1">
+                    <div class="col-lg-2 order-2 order-lg-1">
 
-                        <aside class="sidebar mt-2 mb-5">
-                            <h5 class="font-weight-semi-bold">Menu</h5>
-                            <ul class="nav nav-list flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/orders">Orders</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/addresses">Addresses
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/companies">Consigners</a>
-                                </li>
-                                <!--                                <li class="nav-item">-->
-                                <!--                                    <a class="nav-link" href="elements-forms.html#formsStyleWithIcons">Carrier-->
-                                <!--                                        Profile</a>-->
-                                <!--                                </li>-->
 
-                            </ul>
-                        </aside>
 
                     </div>
                     <div class="col-lg-9 order-1 order-lg-2">
@@ -51,6 +32,13 @@
 
                         <div class="overflow-hidden mb-4 pb-3">
                             <p class="mb-0">See companies below</p>
+
+                        </div>
+                        <div class="container float-end">
+
+                            <button type="button" class="btn btn-primary btn-modern float-end"><a sveltekit:prefetch
+                                                                                                  href="/companies/newcompany">➕
+                                New Company</a></button>
                         </div>
                         <table class="table">
                             <thead>
@@ -117,14 +105,7 @@
                         <div class="form-group row">
 
 
-                            <div class="container float-end">
-                                <button type="button" class="btn btn-primary btn-modern float-sm-end"
-                                        style="margin-left: 10px">Save
-                                </button>
-                                <button type="button" class="btn btn-primary btn-modern float-end"><a sveltekit:prefetch
-                                                                                                      href="/companies/newcompany">➕
-                                    New Company</a></button>
-                            </div>
+
 
                         </div>
                     </div>

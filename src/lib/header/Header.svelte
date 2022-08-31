@@ -5,7 +5,7 @@
 <header>
 	<div>
 		<a href="https://kit.svelte.dev">
-			<img alt="CargoLedger" width="150" height="50" style="padding: 10px;" src="https://cargoledger.nl/wp-content/uploads/2018/07/cargoledger-2-blue.png">
+			<img alt="CargoLedger" width="200" height="60" style="padding: 10px;" src="https://cargoledger.nl/wp-content/uploads/2018/07/cargoledger-2-blue.png">
 		</a>
 	</div>
 
@@ -15,14 +15,14 @@
 		</svg>
 		<ul>
 			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.url.pathname === '/addresses'}>
-				<a sveltekit:prefetch href="/addresses">Address Overview</a>
-			</li>
+<!--			<li class:active={$page.url.pathname === '/addresses'}>-->
+<!--				<a sveltekit:prefetch href="/addresses">Address Overview</a>-->
+<!--			</li>-->
 			<li class:active={$page.url.pathname === '/companies'}>
 				<a sveltekit:prefetch href="/companies">Company Overview</a>
 			</li>
 			<li class:active={$page.url.pathname === '/orders'}>
-				<a sveltekit:prefetch href="/orders">Order Overview</a>
+				<a sveltekit:prefetch href="/orders">New Order</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">

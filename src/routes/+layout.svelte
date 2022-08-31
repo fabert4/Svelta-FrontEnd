@@ -2,9 +2,6 @@
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
 	import { page } from '$app/stores'
-
-
-
 </script>
 
 <Header />

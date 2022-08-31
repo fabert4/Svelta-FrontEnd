@@ -18,27 +18,7 @@
 			<div id="examples" class="container py-2">
 
 				<div class="row">
-					<div class="col-lg-3 order-2 order-lg-1">
-
-						<aside class="sidebar mt-2 mb-5">
-							<h5 class="font-weight-semi-bold">Menu</h5>
-							<ul class="nav nav-list flex-column">
-								<li class="nav-item">
-									<a class="nav-link" href="/orders">Orders</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="/addresses">Addresses
-									</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="/companies">Consigners</a>
-								</li>
-<!--								<li class="nav-item">-->
-<!--									<a class="nav-link" href="elements-forms.html#formsStyleWithIcons">Carrier Profile</a>-->
-<!--								</li>-->
-
-							</ul>
-						</aside>
+					<div class="col-lg-2 order-2 order-lg-1">
 
 					</div>
 					<div class="col-lg-9 order-1 order-lg-2">
