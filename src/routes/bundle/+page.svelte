@@ -6,10 +6,19 @@
     import '../theme-shop.css';
     import '../bootstrap.min.css';
 
+    import { QueryClient, QueryClientProvider } from '@sveltestack/svelte-query';
+    import Users from '$lib/users.svelte'
+    // import { postListusers } from 'src/default/default';
+
+    const queryClient = new QueryClient()
+
 </script>
 
 <div class="content">
     <div class="body">
+
+<p>test</p>
+
         <div role="main" class="main">
             <div id="examples" class="container py-2">
 
@@ -86,6 +95,12 @@
                     </div>
                 </div>
             </div>
+            <div id="querytest">
+                <QueryClientProvider client={queryClient}>
+                    <Users />
+                </QueryClientProvider>
+            </div>
+
             <br><br><br><br><br><br>
         </div>
     </div>

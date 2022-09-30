@@ -9,6 +9,7 @@ const config = {
 		methodOverride: {
 			allowed: ['PATCH', 'DELETE']
 		}
+
 	}
 };
 
