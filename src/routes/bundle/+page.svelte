@@ -4,11 +4,16 @@
     import '../theme.css';
     import '../theme-blog.css';
     import '../theme-shop.css';
-    import '../bootstrap.min.css';
+    import '../bootstrap.min.css'
+    import Userz from "../Userz.svelte";
 
 </script>
 
 <div class="content">
+
+    <Userz />
+
+
     <div class="body">
         <div role="main" class="main">
             <div id="examples" class="container py-2">
