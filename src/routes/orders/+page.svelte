@@ -1,3 +1,4 @@
+
 <script>
     import '../theme-elements.css';
     import '../default.css';
@@ -5,6 +6,47 @@
     import '../theme-blog.css';
     import '../theme-shop.css';
     import '../bootstrap.min.css';
+
+    import {DefaultApi} from "../../openapi/index.ts";
+
+    const api =  new DefaultApi()
+
+    api.loginuserPost({
+        restA1LoginUserModel:  {
+            a0: {
+                email: {
+                    value: "admin@cargoledger.nl"
+                },
+                password: {
+                    value: "P@ssw0rd!"
+                },
+            }
+        }
+    }).then((loginResult) => {
+        console.log(loginResult)
+
+        // api.listshipmentsPost(
+        //     {
+        //         restA1Pagination: {
+        //             a0: {
+        //                 page: 1,
+        //                 itemsPerPage: 20
+        //             }
+        //         }
+        //     },
+        //     {
+        //         headers: {
+        //             "Authorization": loginResult
+        //         }
+        //     }).then((result) => {
+        //     console.log(result)
+
+
+        // })
+    })
+
+
+
 </script>
 <svelte:head>
     <title>About</title>
@@ -12,15 +54,23 @@
 </svelte:head>
 
 <div class="content">
+    <div id="output">
+        <!--{output}-->
+<!--        <ul>-->
+<!--            {#each $tesd as item}-->
+<!--                <li>{item.name} x {item.qty}</li>-->
+<!--            {/each}-->
+<!--        </ul>-->
+<!--        <p>-->
+<!--            {JSON.stringify($testtt.data, null, 2)}-->
+<!--        </p>-->
+    </div>
     <div class="body">
         <div role="main" class="main">
             <div id="examples" class="container py-2">
 
                 <div class="row">
                     <div class="col-lg-2 order-2 order-lg-1">
-
-
-
                     </div>
                     <div class="col-lg-9 order-1 order-lg-2">
 
