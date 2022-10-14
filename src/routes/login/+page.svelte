@@ -1,10 +1,53 @@
-<script>
+<script lang="ts">
     import '../theme-elements.css';
     import '../default.css';
     import '../theme.css';
     import '../theme-blog.css';
     import '../theme-shop.css';
     import '../bootstrap.min.css';
+
+    import {DefaultApi} from "../../openapi/index.ts";
+    import {redirect} from "@sveltejs/kit";
+
+    const api = new DefaultApi()
+
+
+    // TODO: Fix Redirect & Field Validation
+    export function load() {
+        throw redirect(307, "/")
+    }
+
+    async function onSubmit(e) {
+        const formData = new FormData(e.target);
+
+        const data = {};
+        for (let field of formData) {
+            const [key, value] = field;
+            data[key] = value;
+        }
+        console.log(data)
+        api.loginuserPost({
+            restA1LoginUserModel: {
+                a0: {
+                    email: {
+                        value: formData.get("email")
+                    },
+                    password: {
+                        value: formData.get("password")
+                    },
+                }
+            }
+        }).then((loginResult) => {
+            console.log(loginResult)
+            load()
+            // if (url.searchParams.has('redirectTo')) {
+            //     throw redirect(303, url.searchParams.get('redirectTo'));
+            // }
+        })
+
+    }
+
+
 
 </script>
 
@@ -14,12 +57,14 @@
             <div class="col-md-9">
                 <div class="featured-box featured-box-primary text-start mt-0">
                     <div class="box-content">
-                        <h4 class="color-primary font-weight-semibold text-4 text-uppercase mb-3">CargoLedger Customer Login</h4>
-                        <form action="/" id="frmSignIn" method="post" class="needs-validation">
+                        <h4 class="color-primary font-weight-semibold text-4 text-uppercase mb-3">CargoLedger Customer
+                            Login</h4>
+                        <form action="/" id="frmSignIn" method="post" class="needs-validation"
+                              on:submit|preventDefault={onSubmit} >
                             <div class="row">
                                 <div class="form-group col">
                                     <label class="form-label">Username or E-mail Address</label>
-                                    <input type="text" name="username" value="" class="form-control form-control-lg"
+                                    <input type="text" name="email" value="" class="form-control form-control-lg"
                                            required>
                                 </div>
                             </div>
